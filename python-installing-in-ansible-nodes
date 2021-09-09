@@ -1,0 +1,19 @@
+---
+- name: installing python3 and sourcing bashrc
+  hosts: all
+  become: yes
+  gather_facts: no
+
+
+  tasks:
+  - name: installing python3
+    yum:
+      name: python3
+      state: present
+  - name: setting path for python3
+    lineinfile:
+      dest: "/root/.bashrc"
+      line: 'export python=python3'
+      insertafter: 'EOF'
+      regexp: 'export python=python3'
+      state: present
