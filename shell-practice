@@ -1,0 +1,28 @@
+#!/bin/bash
+echo " "
+echo " "
+echo "DETAILS OF ROOT USER "
+echo " "
+echo " "
+
+cat /etc/passwd | grep root
+echo " "
+echo "RAM STATUS"
+echo " "
+echo " "
+free -h
+echo " "
+echo "LAST LOGINS"
+echo " "
+last
+echo " "
+echo "users are currently logged in"
+echo " "
+w
+echo " "
+echo " "
+echo "CPU USAGE"
+echo " "
+top
+echo " "
+echo  " "
